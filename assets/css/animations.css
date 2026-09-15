@@ -68,11 +68,14 @@
 
 /*--- ELEMENT ANIMATIONS & TRANSITIONS ---*/
 
-/*--- Page & Container Load Animation ---*/
+/*--- 1. Page & Container Load Animation ---*/
 .calculator-container {
     animation: calcEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-
+/* 2. Keypad Press Pulse Feedback */
+.btn-active-key {
+    animation: pulse 0.15s ease-in-out;
+}
 
 
 
