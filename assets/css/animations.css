@@ -164,3 +164,34 @@
 .history-item:hover {
     transform: translateX(4px);
 }
+
+/* 9. Clear History Button Hover */
+.btn-clear-history {
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-clear-history:hover {
+    transform: scale(1.02);
+}
+
+.btn-clear-history:active {
+    transform: scale(0.97);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
