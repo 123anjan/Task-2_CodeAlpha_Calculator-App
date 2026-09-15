@@ -32,3 +32,11 @@
     --action-hover: #e11d48;
     --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
+/*  Whole page styles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+}
