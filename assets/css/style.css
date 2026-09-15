@@ -40,3 +40,12 @@
     font-family: 'Outfit', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
 }
+/*-- BODY styles --*/
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    overflow: hidden;
+}
