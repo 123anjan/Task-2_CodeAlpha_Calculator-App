@@ -132,3 +132,26 @@
   visibility: visible;
   transform: translateY(0) scale(1);
 }
+/* 7. Full History Modal Overlay & Slide-up Animations */
+.history-modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+.history-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.history-modal .modal-content {
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 0.35s ease;
+}
+
+.history-modal.open .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
