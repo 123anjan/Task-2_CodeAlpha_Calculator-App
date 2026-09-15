@@ -1,0 +1,34 @@
+/* Variables */
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --calc-bg: rgba(30, 41, 59, 0.75);
+    --calc-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --btn-bg: #334155;
+    --btn-hover: #475569;
+    --operator-bg: #3b82f6;
+    --operator-hover: #2563eb;
+    --equals-bg: #10b981;
+    --equals-hover: #059669;
+    --action-bg: #ef4444;
+    --action-hover: #dc2626;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] {
+    --bg-gradient: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    --calc-bg: rgba(255, 255, 255, 0.85);
+    --calc-border: rgba(255, 255, 255, 0.6);
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --btn-bg: #f1f5f9;
+    --btn-hover: #e2e8f0;
+    --operator-bg: #2563eb;
+    --operator-hover: #1d4ed8;
+    --equals-bg: #10b981;
+    --equals-hover: #059669;
+    --action-bg: #f43f5e;
+    --action-hover: #e11d48;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
