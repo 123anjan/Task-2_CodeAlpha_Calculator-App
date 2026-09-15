@@ -58,6 +58,41 @@ chooseOperation(operation) {
         this.isEvaluated = false;
     }
 
+    compute() {
+        let result;
+        const prev = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+
+        if (isNaN(prev) || isNaN(current)) return null;
+
+        switch (this.operation) {
+            case '+': result = prev + current; break;
+            case '-': result = prev - current; break;
+            case '×': 
+            case '*': result = prev * current; break;
+            case '÷': 
+            case '/': 
+                result = current === 0 ? 'Error' : prev / current;
+                break;
+            default: return null;
+        }
+
+        const formattedResult = typeof result === 'number' 
+            ? (Math.round(result * 1e8) / 1e8).toString()
+            : result;
+
+        const record = {
+            expression: `${this.previousOperand} ${this.operation} ${this.currentOperand}`,
+            result: formattedResult
+        };
+
+        this.currentOperand = formattedResult;
+        this.operation = null;
+        this.previousOperand = '';
+        this.isEvaluated = true;
+
+        return record;
+    }
 }
 
 
