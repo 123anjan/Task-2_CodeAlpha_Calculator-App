@@ -1,94 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animated Smart Calculator</title>
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
     <main class="calculator-container">
-         <header class="top-bar">
-            <!-- Theme Switcher -->
-            <label class="theme-switch" title="Toggle Theme">
-                <input type="checkbox" id="theme-toggle" checked>
-                <span class="slider">
-                    <i class="fas fa-sun icon-sun"></i>
-                    <i class="fas fa-moon icon-moon"></i>
-                </span>
-            </label>
+      <header class="top-bar">
+        <!-- Theme Switcher -->
+        <label class="theme-switch" title="Toggle Theme">
+          <input type="checkbox" id="theme-toggle" checked />
+          <span class="slider">
+            <i class="fas fa-sun icon-sun"></i>
+            <i class="fas fa-moon icon-moon"></i>
+          </span>
+        </label>
 
-            <!-- History Button with Hover Tooltip -->
-            <div class="history-wrapper">
-                <button id="history-btn" class="icon-btn" aria-label="View History">
-                    <i class="fas fa-history"></i>
-                </button>
+        <!-- History Button with Hover Tooltip -->
+        <div class="history-wrapper">
+          <button id="history-btn" class="icon-btn" aria-label="View History">
+            <i class="fas fa-history"></i>
+          </button>
 
-                <!-- Quick Hover Tooltip preview -->
-                <div class="history-tooltip" id="history-tooltip">
-                    <div class="tooltip-header">Recent History</div>
-                    <ul class="tooltip-list" id="tooltip-list">
-                        <li class="empty-msg">No recent history</li>
-                    </ul>
-                </div>
-            </div>
-         </header>
+          <!-- Quick Hover Tooltip preview -->
+          <div class="history-tooltip" id="history-tooltip">
+            <div class="tooltip-header">Recent History</div>
+            <ul class="tooltip-list" id="tooltip-list">
+              <li class="empty-msg">No recent history</li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
-         <!-- Display Screen -->
-        <section class="display-section">
-            <div class="expression-display" id="expression-display"></div>
-            <div class="result-display" id="main-display">0</div>
-        </section>
+      <!-- Display Screen -->
+      <section class="display-section">
+        <div class="expression-display" id="expression-display"></div>
+        <div class="result-display" id="main-display">0</div>
+      </section>
 
-        <!-- Keypad Grid -->
-        <section class="keypad">
-            <button class="btn btn-action" data-action="all-clear">AC</button>
-            <button class="btn btn-action" data-action="clear">C</button>
-            <button class="btn btn-action" data-action="backspace"><i class="fas fa-backspace"></i></button>
-            <button class="btn btn-operator" data-operator="÷">÷</button>
+      <!-- Keypad Grid -->
+      <section class="keypad">
+        <button class="btn btn-action" data-action="all-clear">AC</button>
+        <button class="btn btn-action" data-action="clear">C</button>
+        <button class="btn btn-action" data-action="backspace">
+          <i class="fas fa-backspace"></i>
+        </button>
+        <button class="btn btn-operator" data-operator="÷">÷</button>
 
-            <button class="btn btn-num" data-number="7">7</button>
-            <button class="btn btn-num" data-number="8">8</button>
-            <button class="btn btn-num" data-number="9">9</button>
-            <button class="btn btn-operator" data-operator="×">×</button>
+        <button class="btn btn-num" data-number="7">7</button>
+        <button class="btn btn-num" data-number="8">8</button>
+        <button class="btn btn-num" data-number="9">9</button>
+        <button class="btn btn-operator" data-operator="×">×</button>
 
-            <button class="btn btn-num" data-number="4">4</button>
-            <button class="btn btn-num" data-number="5">5</button>
-            <button class="btn btn-num" data-number="6">6</button>
-            <button class="btn btn-operator" data-operator="-">−</button>
+        <button class="btn btn-num" data-number="4">4</button>
+        <button class="btn btn-num" data-number="5">5</button>
+        <button class="btn btn-num" data-number="6">6</button>
+        <button class="btn btn-operator" data-operator="-">−</button>
 
-            <button class="btn btn-num" data-number="1">1</button>
-            <button class="btn btn-num" data-number="2">2</button>
-            <button class="btn btn-num" data-number="3">3</button>
-            <button class="btn btn-operator" data-operator="+">+</button>
+        <button class="btn btn-num" data-number="1">1</button>
+        <button class="btn btn-num" data-number="2">2</button>
+        <button class="btn btn-num" data-number="3">3</button>
+        <button class="btn btn-operator" data-operator="+">+</button>
 
-            <button class="btn btn-num btn-zero" data-number="0">0</button>
-            <button class="btn btn-num" data-number=".">.</button>
-            <button class="btn btn-equals" data-action="calculate">=</button>
-        </section>
+        <button class="btn btn-num btn-zero" data-number="0">0</button>
+        <button class="btn btn-num" data-number=".">.</button>
+        <button class="btn btn-equals" data-action="calculate">=</button>
+      </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Full History Modal Slide-Over -->
+    <div class="history-modal" id="history-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Calculation History</h3>
+          <button id="close-modal" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-history-list"></div>
+        <div class="modal-footer">
+          <button id="clear-history-btn" class="btn-clear-history">
+            <i class="fas fa-trash-alt"></i> Clear History
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!--The script tagas-->
-<script type="module" src="assets/js/app.js"></script>
-</body>
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
 </html>
