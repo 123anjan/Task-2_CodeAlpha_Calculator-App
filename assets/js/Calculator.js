@@ -45,6 +45,19 @@ export class Calculator {
             this.currentOperand += number;
         }
     }
+chooseOperation(operation) {
+        if (this.currentOperand === '' && this.previousOperand === '') return;
+
+        if (this.previousOperand !== '' && !this.isEvaluated) {
+            this.compute();
+        }
+
+        this.operation = operation;
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = '0';
+        this.isEvaluated = false;
+    }
+
 }
 
 
