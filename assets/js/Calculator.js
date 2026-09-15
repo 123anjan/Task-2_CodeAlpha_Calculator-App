@@ -16,6 +16,9 @@ export class Calculator {
         this.isEvaluated = false;
     }
 
+    clearEntry() {
+        this.currentOperand = '0';
+    }
 }
 
 
