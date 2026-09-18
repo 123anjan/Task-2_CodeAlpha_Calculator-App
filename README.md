@@ -150,20 +150,20 @@ Alternatively, you can open `index.html` directly in the browser.
 ## Screenshots and Demo GIFs
 
 ### Desktop Demo GIF
-![Desktop Demo GIF](./assets/gifs/desktop-demo.gif)
+![Desktop Demo GIF](./assets/gifs/Desktop_view.gif)
 
 > Desktop demo showing the calculator in full layout with smooth interactions and theme switching.
 
 ### Mobile Demo GIF
-![Mobile Demo GIF](./assets/gifs/mobile-demo.gif)
+![Mobile Demo GIF](assets/gifs/mobile_view.gif)
 
 > Mobile demo showing the responsive layout and touch-friendly calculator controls.
 
 ### Desktop Static Screenshot
-![Desktop Calculator Screenshot](./assets/screenshots/desktop-view.png)
+![Desktop Calculator Screenshot](assets/screenshots/Screenshot%202026-09-18%20121606.png)
 
 ### Mobile Static Screenshot
-![Mobile Calculator Screenshot](./assets/screenshots/mobile-view.png)
+![Mobile Calculator Screenshot](assets/screenshots/Screenshot%202026-09-18%20121545.png)
 
 > Add the actual GIF files in `assets/gifs/` and image files in `assets/screenshots/` to display them correctly in GitHub.
 
